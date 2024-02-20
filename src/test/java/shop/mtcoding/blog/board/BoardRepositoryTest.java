@@ -26,7 +26,7 @@ public class BoardRepositoryTest {
     }
 
     @Test
-    public void updateById_test (){
+    public void update_test (){
         //GIVEN
         int id = 1;
         String title = "안녕1";
