@@ -21,7 +21,7 @@ public class BoardRepository {
                 """;
         Query query = em.createNativeQuery(q);
         query.setParameter(1, id);
-        System.out.println(1);
+        query.executeUpdate();
     }
 
 
@@ -29,7 +29,7 @@ public class BoardRepository {
     public void update(int id, String title, String content, String author){
         String q = """
                 update board_tb 
-                set title= ?, content=?, author=?
+                set title = ?, content = ?, author = ?
                 where id = ?
                 """;
         Query query = em.createNativeQuery(q);
